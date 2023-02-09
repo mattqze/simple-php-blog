@@ -2,21 +2,23 @@
 include "layout/header.php";
 ?>
 <link rel="stylesheet" href="/style/main.css">
-<?php
-$files = scandir('post', SCANDIR_SORT_DESCENDING);
-$newest_post = $files[0];
-$newest_post = "post/" . $newest_post;
-$titleline = fgets(fopen($newest_post, 'r'));
-$lines = file($newest_post);
-$removeinfolines = array_slice($lines, 2); 
-$blog_text = implode("\r\n", $removeinfolines);
+<?php 
+$files = preg_grep('/^(?!tmp|(?!([^.]))).*/', scandir('post', SCANDIR_SORT_DESCENDING));
+foreach ($files as $file)
+{
+    $newest_post = "post/" . $file;
+    $titleline = fgets(fopen($newest_post, 'r'));
+    $lines = file($newest_post);
+    $undofirst = array_slice($lines, 2); 
+    $blog_text = implode("\r\n", $undofirst);
+    echo("<center>
+         <div class='blog'>
+         <h2>".$titleline."</h2>
+         <b>".$lines[1]."</b>
+         <h3>".$blog_text."</h3>
+         </div>
+         </center>
+         <br>");
+}
 ?>
-<center>
-<div class="blog">
-<h2><?php echo $titleline; ?></h2>
-<b><?php echo $lines[1]; ?></b>
-<h3><?php echo $blog_text; ?></h3>
-</div>
-<a href="/all-posts/">View Older</a><br><br>
-<a style="position:absolute; bottom:5; left:2;" href=/writer/>Add New</a>
-</center>
+<a style="position:fixed; bottom:5; left:5px;" href="/writer/"><b>New Post</b></a> <b style="position:fixed; bottom:5; right:5px; text-decoration:underline; float:right; cursor:pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">To Top</b></a>

@@ -8,7 +8,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/config/config.cfg')
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="header">
+<div class="header"  id="header">
     <a href="/"><h1><?php echo $title ?></h1></a>
     <hr>
 </div>

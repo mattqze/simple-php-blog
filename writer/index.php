@@ -3,6 +3,7 @@ include "../layout/header.php";
 if(!in_array($_SERVER['REMOTE_ADDR'],$iplist)){
     die('This website cannot be accessed from your location.');
 }
+$date = date("m/d/y");
 ?>
 <link rel="stylesheet" href="/style/main.css">
 <h3 style="text-align:center">Writer</h3>
@@ -12,7 +13,7 @@ if(!in_array($_SERVER['REMOTE_ADDR'],$iplist)){
 <input type="text" name="title">
 <br><br>
 <b>Date</b><br>
-<input type="text" name="date">
+<input type="text" name="date" value=<?php echo($date); ?>>
 <br><br>
 <b>Content</b><br> 
 <textarea id="content" name="content"></textarea><br><br><b>Preview</b><br><iframe id="previewframe"></iframe>
