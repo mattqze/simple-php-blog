@@ -1,4 +1,5 @@
 <?php
+
 $files = scandir('../post', SCANDIR_SORT_DESCENDING);
 $previous = $files[0];
 $previous = substr($previous, 0, -4);

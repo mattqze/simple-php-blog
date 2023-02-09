@@ -7,7 +7,7 @@ $files = scandir('post', SCANDIR_SORT_DESCENDING);
 $newest_post = $files[0];
 $newest_post = "post/" . $newest_post;
 $titleline = fgets(fopen($newest_post, 'r'));
-$lines = file($newest_post, FILE_IGNORE_NEW_LINES);
+$lines = file($newest_post);
 $undofirst = array_slice($lines, 2); 
 $blog_text = implode("\r\n", $undofirst);
 ?>

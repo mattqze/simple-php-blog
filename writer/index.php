@@ -1,9 +1,6 @@
 <?php
 include "../layout/header.php";
-$allowlist = array(
-    '192.168.50.174', //Replace with your IP.
-);
-if(!in_array($_SERVER['REMOTE_ADDR'],$allowlist)){
+if(!in_array($_SERVER['REMOTE_ADDR'],$iplist)){
     die('This website cannot be accessed from your location.');
 }
 ?>

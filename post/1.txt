@@ -1,3 +1,12 @@
-First Post.
-Unknown Date
-Please keep 1.txt at all times, it does not matter if you change any of this text. If you don't keep the file itself, all of this site will break. 
+Intro to Simple-PHP-Blog
+2/8/23
+Instructions on how to use and set-up Simple-PHP-Blog.<br><br>
+To Set-Up Simple-PHP-Blog:
+<br>
+Open <a href="/config/config.cfg">/config/config.cfg</a> and change the title and IP in it,
+then point your Apache Server to the root folder, which you probably shouldn't need to do as you're reading this right now.
+<br><br>
+To Use Simple-PHP-Blog:
+<br>
+Go to <a href="/writer/">/writer/index.php</a> and fill in the forms to make your first post! You can use basic MD/HTML elements such as br for new lines and a for hyperlinks.<br><br>
+If you'd like to get rid of this text, edit <a href="/post/1.txt">/post/1.txt</a> <br><b>Don't delete this file as it is the backbone of the entire blog.</b><br><br>Thank you for reading, and thank you for checking out <a href="https://github.com/mattqze/simple-php-blog/">Simple-PHP-Blog</a>.
