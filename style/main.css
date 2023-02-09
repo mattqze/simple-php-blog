@@ -31,14 +31,15 @@ input[type=text]{
     width:15%;
 }
 #previewframe{
-    height:491px; 
-    padding-top:2px;
-    outline: none;
+    background-color: transparent;
     border:white .5px solid;
-    width:24%; 
-    background-color: #151515;
     font-family: sans-serif;
-    color:rgb(230, 230, 230);
+    font-size: 20px;
+    outline: none;
+    color:white;
+    height:50%; 
+    width:25%; 
+    text-align:left;
 }
 #content{
     background-color: transparent;
@@ -64,6 +65,10 @@ input[type=text]{
         width:40%;
     }
     #content{
+        width:95%;
+        height:70%;
+    }
+    #previewframe{
         width:95%;
         height:70%;
     }
