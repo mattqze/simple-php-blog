@@ -8,8 +8,8 @@ $newest_post = $files[0];
 $newest_post = "post/" . $newest_post;
 $titleline = fgets(fopen($newest_post, 'r'));
 $lines = file($newest_post);
-$undofirst = array_slice($lines, 2); 
-$blog_text = implode("\r\n", $undofirst);
+$removeinfolines = array_slice($lines, 2); 
+$blog_text = implode("\r\n", $removeinfolines);
 ?>
 <center>
 <div class="blog">

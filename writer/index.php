@@ -15,8 +15,24 @@ if(!in_array($_SERVER['REMOTE_ADDR'],$iplist)){
 <input type="text" name="date">
 <br><br>
 <b>Content</b><br>
-<textarea id="content" name="content"></textarea>
+<textarea id="content" name="content"></textarea> <iframe id="previewframe"></iframe>
 <br><br>
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Cheatsheet#inline_elements">Cheat Sheet</a><br><br>
+<a onclick="preview()">Preview</a><br><br>
 <input type="submit">
 </form>
 </center>
+<script>
+    function preview(){
+        var frame = document.getElementById('previewframe');
+        frame.style.background = "#fffff";
+        var content = document.getElementById('content');
+        frame.onload = function() {
+        frame.contentDocument.body.style.fontFamily = "sans-serif";
+        frame.contentDocument.body.style.color = "white";
+        frame.contentDocument.body.style.fontSize = "20px";
+        }
+
+        frame.srcdoc = content.value;
+    }
+</script>

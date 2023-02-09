@@ -30,6 +30,16 @@ input[type=text]{
     color:white;
     width:15%;
 }
+#previewframe{
+    height:491px; 
+    padding-top:2px;
+    outline: none;
+    border:white .5px solid;
+    width:24%; 
+    background-color: #151515;
+    font-family: sans-serif;
+    color:rgb(230, 230, 230);
+}
 #content{
     background-color: transparent;
     border:white .5px solid;
@@ -38,7 +48,7 @@ input[type=text]{
     outline: none;
     color:white;
     height:50%; 
-    width:50%; 
+    width:25%; 
     text-align:left;
 }
 @media (max-width:400px){

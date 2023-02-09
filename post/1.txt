@@ -8,5 +8,5 @@ then point your Apache Server to the root folder, which you probably shouldn't n
 <br><br>
 To Use Simple-PHP-Blog:
 <br>
-Go to <a href="/writer/">/writer/index.php</a> and fill in the forms to make your first post! You can use HTML elements such as br for new lines and a for hyperlinks.<br><br>
+Go to <a href="/writer/">/writer/index.php</a> and fill in the forms to make your first post! You can use basic MD/HTML elements such as br for new lines and a for hyperlinks.<br><br>
 If you'd like to get rid of this text, edit <a href="/post/1.txt">/post/1.txt</a> <br><b>Don't delete this file as it is the backbone of the entire blog.</b><br><br>Thank you for reading, and thank you for checking out <a href="https://github.com/mattqze/simple-php-blog/">Simple-PHP-Blog</a>.
