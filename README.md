@@ -1,1 +1,2 @@
-  Free use. I'd change the title and writer IP, change title in /layout/header.php and the IP in /writer/index.php
+# Simple-PHP-Blog
+Free use blog anyone can set up. Change Title and allowed writer IPs in /config/config.cfg !
